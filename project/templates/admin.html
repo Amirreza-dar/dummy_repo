@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>TILE GAME</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- <link rel="stylesheet" href="/project/static/assets/css/main.css" /> -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+
+		<style>
+        	table, th, td {
+            	border: 1px solid black;
+            	border-collapse: collapse;
+        	}
+        	th, td {
+            	padding: 10px;
+        	}
+    	</style>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1 class="font-effect-neon">TILE GAME</h1>
+							<p>accelerate your rehabilitation</p>
+						</div>
+
+						{% if current_user.is_authenticated %}
+						<nav id="nav">
+							<ul>								
+								<li><a href="/prepare">Prepare</a>
+									<ul><li><a href="/prepare#intro">Welcome</a></li>
+										<li><a href="/prepare#main">Checking In</a></li>
+										<li><a href="/prepare#highlights">The Games</a></li>
+										<li><a href="/prepare#summary">Summary</a></li>
+									</ul>
+								</li>
+								<li><a href="/review">Review</a>
+									<ul>
+										<li><a href="/review#main">Feedback</a></li>
+										<li><a href="/review#results">Results</a></li>
+									</ul>
+								</li>
+								<li><a href="/profile">Profile</a></li>
+								<li><a href="#footer">About</a></li>
+								<li><a href="/logout">Logout</a></li>
+							</ul>
+						</nav>
+						{% endif %}
+					<!-- Nav -->
+					<!-- the Nav is not available yet, only after login -->
+
+					<!--	<nav id="nav">
+							<ul>
+								<li><a href="prepare.html">Prepare</a>
+									<ul><li><a href="prepare.html#intro">Welcome</a></li>
+										<li><a href="prepare.html#main">Checking In</a></li>
+										<li><a href="prepare.html#highlights">The Games</a></li>
+										<li><a href="prepare.html#summary">Summary</a></li>
+									</ul>
+								</li>
+								<li><a href="review.html">Review</a>
+									<ul>
+										<li><a href="review.html#main">Feedback</a></li>
+										<li><a href="review.html#results">Results</a></li>
+									</ul>
+								</li>
+								<li><a href="profile.html">Profile</a></li>
+								<li><a href="#footer">About</a></li>
+								<li><a href="index.html">Logout</a></li>
+							</ul>
+						</nav> -->
+
+				</section>
+
+
+
+			<!-- Intro -->
+				<section id="intro" class="wrapper style1">
+					<div class="title">Welcome</div>
+					{% if current_user.is_authenticated %}
+
+					<div id="loggedin" class="container">
+						<h2> Welcome to Admin page!</h2>
+					</div>
+					<div>
+						{% for user in users %}
+							<h3>{{ user.name }} ({{ user.email }})</h3>
+							<table>
+								<tr>
+									<th>Session ID</th>
+									<th>Session Data</th>
+								</tr>
+								{% for session in user.sessions %}
+									<tr>
+										<td>{{ loop.index }}</td>
+										<td>
+											<pre>{{ session }}</pre>
+										</td>
+									</tr>
+								{% endfor %}
+							</table>
+						{% else %}
+							<p>No users found.</p>
+						{% endfor %}
+					</div>
+				
+
+                    <!-- TODO here add all users information -->
+					{% else %}
+
+					<div id="not-loggedin" class="container">
+
+						<p class="style1">In case you were wondering what this is all about ...</p>
+						<p>
+							 <h1 class="focus">TILE GAME</h1><br class="mobile-hide" />
+						</p>
+						<p class="style3">UWE researchers are testing technology-enhanced sports equipment that could aid users recovering from lower leg injuries. By jumping on sensor-fitted floor tiles in sequences, users can regain strength and stability.</p>
+
+						<p class="style3">We are now testing our first prototype with users and health professionals.</p>
+
+
+						<!-- log in code needs to go in here -->
+						<!-- it may have its own button so the one below may not be needed -->
+						<!-- once logged in,users need to move on to prepare.html -->
+						<div id="loginSection">
+							<div id="loginForm">
+								<div class="column is-4 is-offset-4">
+									<div class="box">
+										<!-- <div class="loginBlock"> -->
+											<form method="POST" action="/login">
+												<div class="field">
+													<input type="email" name="email" placeholder="Your Email" required>
+												</div>
+											
+												<div class="field">
+													<input type="password" name="password" placeholder="Your Password" required>
+												</div>
+											
+												<!-- <div class="field">
+													<label>
+														<input type="checkbox" name="remember">
+														Remember me
+													</label>
+												</div> -->
+											
+												<button class="button is-block is-info is-large is-fullwidth">Login</button>
+											</form>
+										<!-- </div> -->
+										<p>Click <a href="javascript:void(0);" id="showSignUp" style="color: blue;">here</a> to sign up.</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="signUpSection" style="display: none;">
+							<div id="signup">
+								<div class="column is-4 is-offset-4">
+									<div class="box">
+										<form method="POST" action="/signup">
+											<div class="field">
+												<div class="control">
+													<input class="input is-large" type="email" name="email" placeholder="Email" autofocus="">
+												</div>
+											</div>
+										
+											<div class="field">
+												<div class="control">
+													<input class="input is-large" type="text" name="name" placeholder="Name" autofocus="">
+												</div>
+											</div>
+										
+											<div class="field">
+												<div class="control">
+													<input class="input is-large" type="password" name="password" placeholder="Password">
+												</div>
+											</div>
+										
+											<button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+										</form>
+										<p>Click <a href="javascript:void(0);" id="showLogin" style="color: blue;">here</a> to log in.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- <ul class="actions special">
+									<li><a href="" class="button style3 large">Login</a></li>
+						</ul> -->
+
+					</div><!-- end of container -->
+					{% endif %}
+				</section>
+
+
+
+
+
+			<!-- Footer -->
+				<section id="footer" class="wrapper">
+					<div class="title">Further Information</div>
+					<div class="container">
+						<header class="style1"><h2>About this Research</h2>
+
+							<p class="explainer"> TILE GAMES is funded by a UWE Bristol Research, Business and Investment Seed Fund Award. The interdisciplinary team is led by <a href="mailto:mic.palmer@uwe.ac.uk">Dr Michaela Palmer</a>. The team’s biographies and details of work are available on the <a href="https://people.uwe.ac.uk/">UWE staff profile</a> site. </p>
+
+							<p class="explainer">The aim of this project is to deliver a proof‐of‐concept prototype of an adaptive system for lower leg
+							rehabilitation. By stepping and jumping on sensor-fitted floor tiles in specific sequences users can regain movement and strength in the injured limb. The system is set to perform within safe but individually challenging boundaries and optimize physical gameplay to maximise user rehabilitation and enjoyment.</p>
+
+							<p class="explainer">At the prototype stage, the researchers want to find out about user acceptance of this technology and whether physical games may help keep users motivated to continue to perform rehabilitation exercises. Results will feed into a peer-reviewed academic paper as well as a funding application to develop the project further.</p>
+
+							<ul class="actions">
+								<li><a href="#" class="button style1">Back to Top</a></li>
+							</ul>
+						</header>
+							
+						
+						<div class="row">
+
+							<div class="col-6 col-12-medium">
+								<!-- Contact Form -->
+									<section>
+										<form method="post" enctype="text/plain" name="EmailForm" action="mailto:mic.palmer@uwe.ac.uk">
+											<div class="row gtr-50">
+												<div class="col-6 col-12-small">
+													<input type="text" name="name" id="contact-name" placeholder="Name" />
+												</div>
+												<div class="col-6 col-12-small">
+													<input type="text" name="email" id="contact-email" placeholder="Email" />
+												</div>
+												<div class="col-12">
+													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" class="style1" value="Send" /></li>
+														<li><input type="reset" class="style2" value="Reset" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+							</div>
+
+
+							<div class="col-6 col-12-medium">
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-home">Main Contact</h3>
+													<p>
+														Dr Michaela Palmer<br />
+														University of the West of England<br />
+														Coldharbour Lane<br />
+														Bristol, BS16 1QY
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-cog">Team</h3>
+													<p>Dr Appolinaire Etoundi<br />
+													Dr Ahsan Kazmi<br />
+													Mr Wojciech Chmielewski<br />
+													Dr Alice Berry<br />
+													Mr Alex Isaac<br />
+													Mr Luke Bedford<br />
+													Mr Romain Derval<br />
+												</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-envelope">Email</h3>
+													<p>
+														<a href="mailto:mic.palmer@uwe.ac.uk">mic.palmer@uwe.ac.uk</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-money-check">Funded by</h3>
+													<p>
+														UWE Bristol<br />
+														RBI Seed Fund 2023-2024
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div><!-- end of col medium -->
+						</div><!-- end of row -->
+
+						<div id="copyright">
+							<ul>
+								<a href="https://www.uwe.ac.uk"><img class="logo" src="{{ url_for('static', filename='images/uwe.png') }}" alt="UWE Bristol" /></a>
+								<li>&copy; <a href="http://www.mindatplay.co.uk">Mic Palmer</a> 2024</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								</ul>
+						</div>
+						
+					
+					</div><!-- end of container -->
+				</section><!-- end of footer -->
+
+		</div><!-- end of page wrapper -->
+		
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.dropotron.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/loginsignup.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/behaviour.js') }}"></script>
+
+			<!-- <script src="/project/templates/assets/js/loginsignup.js"></script> -->
+			
+
+	</body> 
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>TILE GAME</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1 class="font-effect-neon">TILE GAME</h1>
+							<p>accelerate your rehabilitation</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>								
+								<li><a href="/prepare">Prepare</a>
+									<ul><li><a href="/prepare#intro">Welcome</a></li>
+										<li><a href="/prepare#main">Checking In</a></li>
+										<li><a href="/prepare#highlights">The Games</a></li>
+										<li><a href="/prepare#summary">Summary</a></li>
+									</ul>
+								</li>
+								<li><a href="/review">Review</a>
+									<ul>
+										<li><a href="/review#main">Feedback</a></li>
+										<li><a href="/review#results">Results</a></li>
+									</ul>
+								</li>
+								<li><a href="/profile">Profile</a></li>
+								<li><a href="#footer">About</a></li>
+								<li><a href="/logout">Logout</a></li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Intro -->
+				<section id="intro" class="wrapper style1">
+					<div class="title">Welcome</div>
+					<div class="container">
+						<p class="style1">In case you were wondering what this is all about ...</p>
+						<p>
+							 <h1 class="focus">TILE GAME</h1><br class="mobile-hide" />
+						</p>
+						<p class="style3">UWE researchers are testing technology-enhanced sports equipment that could aid users recovering from lower leg injuries. By jumping on sensor-fitted floor tiles in sequences, users can regain strength and stability.</p>
+						<ul class="actions special">
+									<li><a href="#main" class="button style3 large">Get Started</a></li>
+									<li><a href="#footer" class="button style3 large">More Info</a></li>
+						</ul>
+					</div>
+				</section>
+
+
+
+
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="title">Checking In</div>
+					<header class="style1"><h2>How are you feeling right now?</h2></header>
+
+					<form id="userChoicesForm">
+						<div class="container">
+							<div class="row aln-center">
+								<div class="col-2 col-12-medium">
+									<section class="highlight">
+										<!-- <ul class="actions">
+											<li><a href="#" class="button stylemeh"><img class="emoji" src="static/icons/sleepy-32.png" alt="" /></a></li>
+										</ul> -->
+										<ul class="actions">
+											<li>
+												<!-- Hidden radio input -->
+												<input type="radio" id="feelingMeh" name="feeling" value="meh" style="display: none;">
+
+												<!-- Label wrapping the clickable area, associated with the input -->
+												<label for="feelingMeh" class="button stylemeh">
+													<img class="emoji" src="static/icons/sleepy-32.png" alt="">
+													 <!-- You can add text to make it more descriptive -->
+												</label>
+											</li>
+										</ul>
+										<h3 align="center"><a href="#">Meh</a></h3>
+										<p align="center">Not much energy today. Can't wait to get home.</p>
+									</section>
+								</div>
+								<div class="col-2 col-12-medium">
+									<section class="highlight">
+										<!-- <ul class="actions">
+											<li><a href="#" class="button styleok"><img class="emoji" src="static/icons/neutral-32.png" alt="" /></a></li>
+										</ul> -->
+										<ul class="actions">
+											<li>
+												<!-- Hidden radio input -->
+												<input type="radio" id="feelingOkay" name="feeling" value="Okay" style="display: none;">
+												<!-- Label wrapping the clickable area, associated with the input -->
+												<label for="feelingOkay" class="button styleok">
+													<img class="emoji" src="static/icons/neutral-32.png" alt="">
+													 <!-- You can add text to make it more descriptive -->
+												</label>
+											</li>
+										</ul>
+										<h3 align="center"><a href="#">Mmm-okay</a></h3>
+										<p align="center">Feeling a bit tired but may have some energy left.</p>
+									</section>
+								</div>
+								<div class="col-2 col-12-medium">
+									<section class="highlight">
+										<!-- <ul class="actions">
+											<li><a href="#" class="button styleready"><img class="emoji" src="static/icons/joy-32.png" alt="" /></a></li>
+										</ul> -->
+										<ul class="actions">
+											<li>
+												<!-- Hidden radio input -->
+												<input type="radio" id="feelingReady" name="feeling" value="Ready" style="display: none;">
+												<!-- Label wrapping the clickable area, associated with the input -->
+												<label for="feelingReady" class="button styleready">
+													<img class="emoji" src="static/icons/joy-32.png" alt="">
+													 <!-- You can add text to make it more descriptive -->
+												</label>
+											</li>
+										</ul>
+										<h3 align="center"><a href="#">Ready</a></h3>
+										<p align="center">Relaxed and balanced, in the zone.</p>
+									</section>
+								</div>
+								<div class="col-2 col-12-medium">
+									<section class="highlight">
+										<!-- <ul class="actions">
+											<li><a href="#" class="button stylegood"><img class="emoji" src="static/icons/happy-32.png" alt="" /></a></li>
+										</ul> -->
+										<ul class="actions">
+											<li>
+												<!-- Hidden radio input -->
+												<input type="radio" id="feelingGood" name="feeling" value="Good" style="display: none;">
+												<!-- Label wrapping the clickable area, associated with the input -->
+												<label for="feelingGood" class="button stylegood">
+													<img class="emoji" src="static/icons/happy-32.png" alt="">
+													 <!-- You can add text to make it more descriptive -->
+												</label>
+											</li>
+										</ul>
+										<h3 align="center"><a href="#">Let's go</a></h3>
+										<p align="center">Some movement would feel great.</p>
+									</section>
+								</div>
+								<div class="col-2 col-12-medium">
+									<section class="highlight">
+										<!-- <ul class="actions">
+											<li><a href="#" class="button stylehappy"><img  class="emoji" src="static/icons/laugh-32.png" alt="" /></a></li>
+										</ul> -->
+										<ul class="actions">
+											<li>
+												<!-- Hidden radio input -->
+												<input type="radio" id="feelingHappy" name="feeling" value="Happy" style="display: none;">
+												<!-- Label wrapping the clickable area, associated with the input -->
+												<label for="feelingHappy" class="button stylehappy">
+													<img class="emoji" src="static/icons/laugh-32.png" alt="">
+													 <!-- You can add text to make it more descriptive -->
+												</label>
+											</li>
+										</ul>
+										<h3 align="center"><a href="#">Try stop me</a></h3>
+										<p align="center">Bursting with energy and ready for intense exercise.</p>
+									</section>
+								</div>
+							</div><!-- enf of row -->
+						
+
+							
+						</div><!-- enf of container -->
+						<ul class="actions special">
+							<li><a href="javascript:void(0);" id="toGame" class="button style3 large">Next</a></li>
+						</ul>
+					</form>
+						
+					
+				</section>
+
+
+			<!-- Highlights -->
+				<section id="highlights" class="wrapper style3">
+					<div class="title">The Games</div>
+					<header class="style1"><h2>Please choose a Game</h2></header>
+
+					    <form id="gameSelectionForm">
+							<div class="container">
+								<div class="row aln-center">
+									<div class="col-4 col-12-medium">
+										<section class="highlight">
+											<!-- <img class="image featured" src="static/images/pic02.jpg" alt="" /> -->
+											<video class="image featured" controls autoplay muted>
+												<source src="static/videos/rope.mp4" type="video/mp4">Your browser does not support the video tag</video>
+											<h3>Jump the Rope</h3>
+											<p>Put in some good quality double-legged jumps, and dont get caught by the line of lights. Build strength and balance in this slow and challenging game.</p>
+
+												<!-- <ul><li>
+												<a href="#" class="button level">easy</a>
+												<a href="#" class="button level">medium</a>
+												<a href="#" class="button level">hard</a>
+												</li></ul> -->
+												<ul><li>
+													<label class="button level">
+														<input type="radio" name="gameLevel" id="levelEasy" value="easy" style="display: none;">
+														<span>Easy</span>
+													</label>
+													
+													<label class="button level">
+														<input type="radio" name="gameLevel" id="levelMedium" value="medium" style="display: none;">
+														<span>Medium</span>
+													</label>
+													
+													<label class="button level">
+														<input type="radio" name="gameLevel" id="levelHard" value="hard" style="display: none;">
+														<span>Hard</span>
+													</label>
+												</li></ul>
+
+										</section>
+									</div>
+									<div class="col-4 col-12-medium">
+										<section class="highlight">
+											<!-- <img class="image featured" src="static/images/pic03.jpg" alt="" /> -->
+											<video class="image featured" controls autoplay muted>
+												<source src="static/videos/Lpad.mp4" type="video/mp4">Your browser does not support the video tag</video>
+											<h3>Lilypads</h3>
+											<p>Look out for the next Lilypad and jump on it before your own one dips under water, but watch out for the Pike.</p>
+											<ul class="actions">
+												<li><a href="#highlights" class="button style2">Unavailable</a></li>
+											</ul>
+										</section>
+									</div>
+									<div class="col-4 col-12-medium">
+										<section class="highlight">
+											<!-- <img class="image featured" src="static/images/pic04.jpg" alt="" /> -->
+											<video class="image featured" controls autoplay muted>
+												<source src="static/videos/simon.mp4" type="video/mp4">Your browser does not support the video tag</video>
+											<h3>Simon Says</h3>
+											<p>Follow the sequence of lights and try to complete the set. Double-leg jumps, single leg landings and more.</p>
+											<ul class="actions">
+												<li><a href="#highlights" class="button style2">Unavailable</a></li>
+											</ul>
+										</section>
+									</div>
+								</div> <!-- end od rows -->
+									<ul class="actions special">
+										<!-- <li><a href="javascript:void(0);" id="toSummary" class="button style3 large">Next</a></li> -->
+										<li><button type="submit" id="toSummary" class="button style3 large">Next</button></li>
+									</ul>
+							</div><!-- end od container -->
+						</form>
+				</section>
+
+
+
+			<!-- Summary -->
+				<section id="summary" class="wrapper style2">
+					<div class="title">Summary</div>
+					<div class="container">
+						<header class="style1"><h2>Preparing for your Tile Game</h2></header>
+
+
+							<!-- Features -->
+							<section id="features">
+							
+								<div class="feature-list">
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3>Double-leg jumping technique: </h3>
+												<p>Stand equally balanced with your feet shoulder-width apart, and make sure your knees don't drop inwards. Lower your body into a half-squat and get your arms ready by your side. Push off from the balls of your feet, swing the arms fowards and up as you extend your hips, knees, and ankles. Land slightly leaning forward, on the balls of your feet. Bend the knees making sure both legs equally support the impact of your landing. Bring the arms back down to your side.</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<!-- <img class="image featured" src="static/images/banner3.jpg" alt="" /> -->
+												<iframe width="220" height="320" src="https://www.youtube.com/embed/e8hvAXTtMzc?si=TRHxAHj9DZ5H6BZt&amp;controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+											</section>
+										</div>
+
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon fa-check-square">Health first</h3>
+												<p>Please focus on the quality of your movements during the game, as this is key to rehabilitation. Please don't perform any moves your physio or doctor advised you against. Should you feel any pain beyond 'normal' muscle burn, please stop and let us know.
+												</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon solid fa-question-circle">Why this research?</h3>
+												<p>This project hopes to support users who have more specific needs than the average healthy population. By taking part you will help us to gain a better understanding of tech-enhanced exercise devices for users with lower limb rehabilitation needs.</p>
+											</section>
+										</div>
+
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon fa-file-video">Video recordings</h3>
+												<p>We would love to video record a section of your gameplay to improve the game. The camera can also be set to only show your lower limbs on the tiles or you can ask us not to video-record at all. Please let us know about your preferences in the consent form.</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon solid fa-sync">Your data</h3>
+												<p>All information you give will be kept confidential and anonymised at point of data transcription. We will review your anonymised data, but you will not be re-identifyable. We will store all data until a further funding application and paper publications are submitted.</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon solid fa-wrench">How do the tiles work?</h3>
+												<p>Pressure sensors on the tiles collect how a person performs during the game, and we'd be happy to share your performance data with you afterwards. There is no electricity flowing through your body, or any camera tracking involved.</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-medium">
+											<section>
+												<h3 class="icon fa-comments">Any other questions?</h3>
+												<p>If you have questions please feel free to speak to the researchers. You can pause or stop at any time during the game. After gameplay we would like to hear about your experience of the game so we can adapt it further for lower leg rehabilitation. 
+												</p>
+											</section>
+										</div>
+									</div><!-- end of row -->
+								</div><!-- end of feature-list -->
+
+								<ul class="actions special">
+									<li><a href="/review" class="button style3 large">Play</a></li>
+								</ul>
+							</section><!-- end of features -->
+					
+						</div><!-- end of container -->
+				</section>
+
+
+
+
+
+			<!-- Footer -->
+				<section id="footer" class="wrapper">
+					<div class="title">Further Information</div>
+					<div class="container">
+						<header class="style1"><h2>About this Research</h2>
+
+							<p class="explainer"> TILE GAMES is funded by a UWE Bristol Research, Business and Investment Seed Fund Award. The interdisciplinary team is led by <a href="mailto:mic.palmer@uwe.ac.uk">Dr Michaela Palmer</a>. The team’s biographies and details of work are available on the <a href="https://people.uwe.ac.uk/">UWE staff profile</a> site. </p>
+
+							<p class="explainer">The aim of this project is to deliver a proof‐of‐concept prototype of an adaptive system for lower leg
+							rehabilitation. By stepping and jumping on sensor-fitted floor tiles in specific sequences users can regain movement and strength in the injured limb. The system is set to perform within safe but individually challenging boundaries and optimize physical gameplay to maximise user rehabilitation and enjoyment.</p>
+
+							<p class="explainer">At the prototype stage, the researchers want to find out about user acceptance of this technology and whether physical games may help keep users motivated to continue to perform rehabilitation exercises. Results will feed into a peer-reviewed academic paper as well as a funding application to develop the project further.</p>
+
+							<ul class="actions">
+								<li><a href="#" class="button style1">Back to Top</a></li>
+							</ul>
+						</header>
+							
+						
+						<div class="row">
+
+							<div class="col-6 col-12-medium">
+								<!-- Contact Form -->
+									<section>
+										<form method="post" enctype="text/plain" name="EmailForm" action="mailto:mic.palmer@uwe.ac.uk">
+											<div class="row gtr-50">
+												<div class="col-6 col-12-small">
+													<input type="text" name="name" id="contact-name" placeholder="Name" />
+												</div>
+												<div class="col-6 col-12-small">
+													<input type="text" name="email" id="contact-email" placeholder="Email" />
+												</div>
+												<div class="col-12">
+													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" class="style1" value="Send" /></li>
+														<li><input type="reset" class="style2" value="Reset" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+							</div>
+
+
+							<div class="col-6 col-12-medium">
+								<!-- Contact -->
+									<section class="feature-list small">
+										<div class="row">
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-home">Main Contact</h3>
+													<p>
+														Dr Michaela Palmer<br />
+														University of the West of England<br />
+														Coldharbour Lane<br />
+														Bristol, BS16 1QY
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-cog">Team</h3>
+													<p>Dr Appolinaire Etoundi<br />
+													Dr Ahsan Kazmi<br />
+													Mr Wojciech Chmielewski<br />
+													Dr Alice Berry<br />
+													Mr Alex Isaac<br />
+													Mr Luke Bedford<br />
+													Mr Romain Derval<br />
+												</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-envelope">Email</h3>
+													<p>
+														<a href="mailto:mic.palmer@uwe.ac.uk">mic.palmer@uwe.ac.uk</a>
+													</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section>
+													<h3 class="icon solid fa-money-check">Funded by</h3>
+													<p>
+														UWE Bristol<br />
+														RBI Seed Fund 2023-2024
+													</p>
+												</section>
+											</div>
+										</div>
+									</section>
+
+							</div><!-- end of col medium -->
+						</div><!-- end of row -->
+
+						<div id="copyright">
+							<ul>
+								<a href="https://www.uwe.ac.uk"><img class="logo" src="static/images/uwe.png" alt="UWE Bristol" /></a>
+								<li>&copy; <a href="http://www.mindatplay.co.uk">Mic Palmer</a> 2024</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								</ul>
+						</div>
+						
+					
+					</div><!-- end of container -->
+				</section><!-- end of footer -->
+
+		</div><!-- end of page wrapper -->
+
+		<!-- Scripts -->
+			<!-- <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="project/static/assets/js/behaviour.js"></script>
+			<script src="project/templates/assets/js/loginsingup.js"></script> -->
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/jquery.dropotron.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/loginsignup.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/behaviour.js') }}"></script>
+
+	</body>
+</html>
